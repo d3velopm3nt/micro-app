@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { RemoteEntryComponent } from './entry.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { NxWelcomeComponent } from '../home/nx-welcome.component';
 import { AuthModule } from '@micro-app/auth';
 
 @NgModule({
@@ -18,6 +18,5 @@ import { AuthModule } from '@micro-app/auth';
       },
     ]),
   ],
-  providers: [],
 })
 export class RemoteEntryModule {}

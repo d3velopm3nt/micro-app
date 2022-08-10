@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 
+
 @Component({
   selector: 'auth-user',
   templateUrl: './auth-user.component.html',
@@ -16,11 +17,17 @@ export class AuthUserComponent implements OnInit, OnDestroy {
     return this._username;
   }
 
-  constructor(private authService: AuthService) { }
+  constructor(
+     private authService: AuthService
+    ) { }
   ngOnDestroy(): void {
     console.log('destory auth user')
   }
   ngOnInit(): void {
     console.log('auth user component loaded')
+
+    this.authService.username$.subscribe(user =>{
+      if(this._username !== user) this._username = user;
+    })
   }
 }

@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
      loadChildren: () => import('./remote-entry/entry.module').then(m => m.RemoteEntryModule)
    }], { initialNavigation: 'enabledBlocking' }),
  ],
- providers: [],
+
  bootstrap: [AppComponent],
 })
 export class AppModule {}

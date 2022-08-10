@@ -16,7 +16,6 @@ export class AuthLoginComponent implements OnInit {
   }
 
   login(): void {
-    debugger
     this.authService.login(this.userName, this.password);
   }
 
